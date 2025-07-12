@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whispers of the Unknown - Read</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background: url('ob.jpg') center center no-repeat;
+            background-size: cover;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .book {
+            width: 95%;
+            max-width: 1300px;
+            height: 700px;
+            /* Increased height to match book image */
+            display: flex;
+            position: relative;
+        }
+
+        .page-left,
+        .page-right {
+            width: 47%;
+            /* Reduced width to fit visually inside the book */
+            padding: 60px 40px;
+            box-sizing: border-box;
+            color: #222;
+            text-align: justify;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-shadow: 0.3px 0.3px 0.5px rgba(0, 0, 0, 0.05);
+        }
+
+        .page-left {
+            padding-left: 170px;
+            padding-right: 30px;
+        }
+
+        .page-right {
+            padding-left: 50px;
+            padding-right: 100px;
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .navigation {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 40px;
+            box-sizing: border-box;
+            z-index: 10;
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .nav-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .spread {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+    <script>
+        let currentSpread = 1;
+
+        function showSpread(num) {
+            document.querySelectorAll('.spread').forEach((spread, index) => {
+                spread.style.display = (index === num - 1) ? 'flex' : 'none';
+            });
+        }
+
+        function nextPage() {
+            if (currentSpread < 2) {
+                currentSpread++;
+                showSpread(currentSpread);
+            }
+        }
+
+        function prevPage() {
+            if (currentSpread > 1) {
+                currentSpread--;
+                showSpread(currentSpread);
+            }
+        }
+
+        // Initial view
+        showSpread(currentSpread);
+    </script>
+
+</head>
+
+<body>
+    <div class="book">
+
+        <!-- Spread 1: Pages 1 and 2 -->
+        <div class="spread" id="spread1">
+            <div class="page-left">
+                <h2>Chapter 1: Deep Distance</h2>
+                <p>ഇല്ല.... ഇല്ല.... എന്നെക്കൊണ്ട് ഇതിനു പറ്റില്ല......അല്ലെങ്കിലും എന്നെക്കൊണ്ട് എന്തിനാ പറ്റുന്നേ...
+                    വേണമെന്ന് ആഗ്രഹിച്ചതൊന്നുംതന്നെ എന്റെ കൂടെയില്ല....
+                    എന്റെ വീട്... എന്റെ കുടുംബം......... ഇഷ്ടപ്പെട്ട ആൾ... ഒന്നും ഇന്ന് എന്റെ കൈയ്യിൽ ഇല്ലല്ലോ.....
+                    'ഒന്നിന്നും അർഹതയില്ലാത്തവളായ ഞാൻ'... ഇങ്ങയൊക്കെ ചിന്തിച്ചത് പോലും തെറ്റായി പോയോ എന്ന് പലപ്പോഴും
+                    എനിക്ക്
+                    തന്നെ
+                    തോന്നിയിട്ടുണ്ടല്ലേലും അതിനെ എന്റെ വെറുമൊരു പാഴ് ചിന്തയായി ഞാൻ വിട്ടിട്ടേയുള്ളു....</p>
+            </div>
+            <div class="page-right">
+                <p>എന്നാൽ ഇപ്പോൾ അന്ന് തോന്നിയ അർഹതയില്ലാത്തവൾ എന്ന് ഞാൻ തന്നെ എന്റെ മേൽ ചാർത്തിയ പട്ടം ശെരിയായിരുന്നു
+                    എന്ന്
+                    തോന്നുന്നു..... അവൾ കരഞ്ഞുക്കൊണ്ട് ബാത്‌റൂമിലെ നിലത്തേക്ക് ഊർന്നിരുന്നു.....
+                    നിലത്തേക്ക് ഇരുന്നപ്പോൾ
+                    വലതു കൈയ്യിൽ പിടിച്ചിരുന്ന ബ്ലേഡ് കൈ വിട്ട് വാഷ്ബെയ്സിൽ വീണുപോയിരുന്നു.....
+                    അവളുടെ നെഞ്ചും നെഞ്ചിൻകൂടും ഇപ്പൊ പൊട്ടും എന്നാ രീതിയിലുള്ള വേദനയിലേക്ക് മാറി.... വിറക്കുന്ന
+                    ഇരുകൈകളാൽ
+                    കാലുകളെ ചുറ്റി
+                    പിടിച്ച് കാൽമുട്ടുകൾക്കിടയിലേക്ക് അവൾ തന്റെ കരഞ്ഞു കരഞ്ഞ് ചുവന്നിരിക്കുന്ന മുഖം ചേർത്തുവച്ചിരുന്ന്
+                    വിതുമ്പി......</p>
+            </div>
+        </div>
+
+        <!-- Spread 2: Pages 3 and 4 -->
+        <div class="spread" id="spread2" style="display: none;">
+            <div class="page-left">
+
+                <p>ഒന്നിനും വേണ്ടി
+                    ഇത്രെത്തോളം ആഗ്രഹിച്ചിരുന്നില്ല........ എവിടെ നിന്നും കിട്ടാത്ത സ്നേഹം ഒരാളിൽ നിന്നും യാധൊരുവിധ
+                    അതിരുമില്ലാതെ
+                    കിട്ടിക്കൊണ്ടിരുന്നതായിരുന്നു....
+                    സ്നേഹം എന്ന വികാരത്തോട് നല്ല രീതിയിൽ പരിഭവവും... സ്നേഹിക്കാൻ ആരെങ്കിലും ഉള്ളവരോട് അല്പം അസൂയയും
+                    എന്നിൽ വന്നത്
+                    സ്നേഹത്തിന്റെ സുഖം അറിഞ്ഞതിൽ പിന്നെയാണ്.
+                    സ്നേഹത്തോടെയും വാത്സല്യത്തോടെയും അല്ലാതെ ഒരിക്കലും ഒരു നോട്ടം കൊണ്ടുപോലും വേദനിപ്പിച്ചിട്ടില്ല......
+                </p>
+            </div>
+            <div class="page-right">
+                <p>എന്നിട്ടും ആദ്യമായി എന്റെ കൈയ്യിൽ ആ അധരങ്ങൾ പതിഞ്ഞപ്പോൾ കൈ നിവർത്തി മുഖത്തേക്ക് വീശിയടിച്ചു.....
+                    എപ്പോഴത്തെയും പോലെ ആ മുഖത്തു ചിരി നിറഞ്ഞു നിന്നിരുന്നെങ്കിലും ആ കണ്ണുകളിൽ കണ്ണു നീരിന്റെ തിളക്കം ഞാൻ
+                    കണ്ടിരുന്നു.....
+                    സ്നേഹത്തോടെ ഉള്ള നോട്ടത്തിൽ അപ്പോൾ പോലും യാധൊരുവിധ മാറ്റവും ഉണ്ടായിരുന്നില്ല....
+                    ആദ്യമായി ആ ഹൃദയത്തിൽ എന്നോടുള്ള ഇഷ്ടത്തിന്റെ ആഴം അറിഞ്ഞത് അന്നാണ്.
+                    അറിയാതെ എന്റെ മനസ്സൊന്നു തേങ്ങിപ്പോയി.....
+                    പിന്നീട് എന്നും കൂടെ ഉണ്ടായിരുന്നുവെങ്കിലും ഒരിക്കൽ പോലും അതിനെ കുറിച് പറഞ്ഞിരുന്നില്ല....</p>
+            </div>
+        </div>
+
+        <div class="spread" id="spread3" style="display: none;">
+            <div class="page-left">
+
+                <p>മനസ്സ് തളരുന്ന നിമിഷത്തിലും മനുഷ്യർ തളർത്തുന്ന നിമിഷത്തിലും ഒരിക്കലും ആ കണ്ണുകൾ നിറഞ്ഞു ഞാൻ
+                    കണ്ടിട്ടില്ലായിരുന്നു.....
+                    നിന്നെക്കൊണ്ട് ഒന്നിന്നും കഴിയില്ല എന്ന് മുദ്ര കുത്തിയവരുടെ മുമ്പിൽ എന്നും തല ഉയർത്തി 'എന്നെകൊണ്ട്
+                    നേടാൻ കഴിയും' എന്ന്
+                    ഓരോന്നു കഷ്ടപ്പെട്ട് നേടിയതിലൂടെ കാണിച്ചു കൊടുത്തിട്ടേയുള്ളു.....</p>
+            </div>
+            <div class="page-right">
+                <p>ആ രീതിയിൽ ഉള്ള അടുപ്പം എനിക്ക് ഇഷ്ടമല്ല എന്ന് കരുതി പിന്നീട് ഒരിക്കലും അത് പറഞ്ഞില്ല , പക്ഷെ എന്നും
+                    എന്റെ നല്ലൊരു
+                    സുഹൃത്തായി കൂടെ ഉണ്ടായിരുന്നു........
+                    അന്നങ്ങനെ ചെയ്യരുതായിരുന്നു എന്നു പറഞ്ഞ് മനസ്സ് തന്നെ പലവട്ടം എന്നെ കുറ്റപ്പെടുത്തി....
+                    അല്ലെങ്കിലും ഞാൻ അടിക്കാൻ പാടില്ലായിരുന്നു....... അത്രേമേൽ സ്നേഹം ആയിരുന്നില്ലേ.....</p>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="navigation">
+            <button class="nav-btn" onclick="prevPage()">⟵</button>
+            <button class="nav-btn" onclick="nextPage()">⟶</button>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

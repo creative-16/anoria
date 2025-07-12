@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anoria Library</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5fa;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 2.5rem;
+            color: #444;
+        }
+
+        .book-library {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 24px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .book-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .book-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .book-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .book-title {
+            text-align: center;
+            padding: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Anoria Library</h1>
+
+    <div class="book-library">
+        <div class="book-card" onclick="window.location.href='book1.html'">
+            <img src="cover1.jpg" alt="Book 1 Cover" />
+            <div class="book-title">Deep Distance</div>
+        </div>
+        <div class="book-card" onclick="window.location.href='book2.html'">
+            <img src="cover2.jpg" alt="Book 2 Cover" />
+            <div class="book-title">Warm Tears</div>
+        </div>
+        <div class="book-card" onclick="window.location.href='book3.html'">
+            <img src="cover3.jpg" alt="Book 3 Cover" />
+            <div class="book-title">Darkside</div>
+        </div>
+        <!-- Add more book-card blocks as needed -->
+    </div>
+</body>
+
+</html>

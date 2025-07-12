@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inveil - Anoria</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Fullscreen background image container -->
+    <div class="background-container">
+        <img id="bookImage" src="1.jpg" alt="Book Front" class="background-image" />
+
+        <!-- Flip Button -->
+        <button class="flip-button" onclick="flipBook()">
+            <img src="repeat_5111990.png" alt="Flip" />
+        </button>
+
+        <!-- Sidebar Buttons -->
+        <div class="sidebar-buttons">
+            <button onclick="toggleProfileCard()">
+                <img src="3dicons-picture-dynamic-color.png" alt="Profile" />
+            </button>
+            <button onclick="window.location.href='library.html'">
+                <img src="3dicons-folder-dynamic-color.png" alt="Books" />
+            </button>
+            <button>
+                <img src="3dicons-chat-bubble-dynamic-color.png" alt="Future Feature" />
+            </button>
+        </div>
+
+        <!-- Profile Card -->
+        <div id="profileCard" class="profile-card hidden">
+            <img id="profileImage" src="hazel.jpg" alt="Hazel" />
+            <h3 id="profileName">Hazel Mariyam</h3>
+            <p id="profileDesc">Someone who sees the world through feeling more than form
+                left unspoken: grief, beauty, ache, and wonder. She believes words don’t always have to be loud to leave
+                an echo.</p>
+            <button onclick="toggleProfileCard()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
